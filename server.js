@@ -8,6 +8,9 @@ var React = require('react');
 var Router = require('react-router');
 var routes = require('./app/routes');
 
+var mongoose = require('mongoose');
+var Character = require('./models/character');
+
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
