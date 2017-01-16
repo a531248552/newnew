@@ -19,9 +19,11 @@ class AddCharacterActions {
       data: { name: name, gender: gender }
     })
       .done((data) => {
+        console.log("done"+data.message);
         this.actions.addCharacterSuccess(data.message);
       })
       .fail((jqXhr) => {
+        console.log("done"+jqXhr.responseJSON.message);
         this.actions.addCharacterFail(jqXhr.responseJSON.message);
       });
   }

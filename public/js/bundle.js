@@ -32,8 +32,10 @@ var AddCharacterActions = (function () {
         url: '/api/characters',
         data: { name: name, gender: gender }
       }).done(function (data) {
+        console.log("done" + data.message);
         _this.actions.addCharacterSuccess(data.message);
       }).fail(function (jqXhr) {
+        console.log("done" + jqXhr.responseJSON.message);
         _this.actions.addCharacterFail(jqXhr.responseJSON.message);
       });
     }
@@ -1530,6 +1532,7 @@ var FooterStore = (function () {
   _createClass(FooterStore, [{
     key: 'onGetTopCharactersSuccess',
     value: function onGetTopCharactersSuccess(data) {
+      console.log(this.characters);
       this.characters = data.slice(0, 5);
     }
   }, {

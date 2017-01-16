@@ -50,7 +50,6 @@ app.post('/api/characters', function(req, res, next) {
               if (character) {
                 return res.status(409).send({ message: character.name + ' is already in the database.' });
               }
-
               callback(err, characterId);
             });
           } catch (e) {

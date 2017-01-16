@@ -8,6 +8,7 @@ class FooterStore {
   }
 
   onGetTopCharactersSuccess(data) {
+    console.log(this.characters)
     this.characters = data.slice(0, 5);
   }
 
